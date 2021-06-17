@@ -13,7 +13,7 @@ namespace SpreadsheetManagerTypes {
     [key: string]: number;
   }
 
-  export type GenericRowValue = string | number | Date | undefined;
+  export type GenericRowValue = string | number | Date | boolean | undefined;
 
   export interface GenericRowObject {
     [key: string]: SpreadsheetManagerTypes.GenericRowValue;
@@ -95,7 +95,7 @@ class SpreadsheetManager {
    */
   createObjectFromRow(row: _Row) {
     const { rowHeaders } = this;
-    const obj: { [key: string]: string | number | Date | undefined } = {};
+    const obj: SpreadsheetManagerTypes.GenericRowObject = {};
     for (let key in rowHeaders) {
       try {
         obj[key] = row.col(key);
