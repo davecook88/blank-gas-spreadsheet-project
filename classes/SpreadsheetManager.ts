@@ -16,7 +16,7 @@ namespace SpreadsheetManagerTypes {
   export type GenericRowValue = string | number | Date | boolean | undefined;
 
   export interface GenericRowObject {
-    _rowIndex: number;
+    _rowIndex?: number;
     [key: string]: SpreadsheetManagerTypes.GenericRowValue;
   }
 }
