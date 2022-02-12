@@ -298,6 +298,9 @@ class SpreadsheetManager {
   }
 
   updateOneRow(row: SpreadsheetManagerTypes.GenericRowObject) {
+    if (!row._rowIndex) {
+      throw new Error("No _rowIndex");
+    }
     const newRow = this.createRowFromObject(row);
     this.sheet
       ?.getRange(row._rowIndex, this.firstColumn, 1, newRow.length)
