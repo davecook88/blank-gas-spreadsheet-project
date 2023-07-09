@@ -13,13 +13,7 @@ namespace SpreadsheetManagerTypes {
     [key: string]: number;
   }
 
-  export type GenericRowValue =
-    | string
-    | number
-    | Date
-    | boolean
-    | undefined
-    | null;
+  export type GenericRowValue = string | number | Date | boolean | undefined;
 
   export interface GenericRowObject {
     _rowIndex?: number;
