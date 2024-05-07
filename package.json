@@ -1,0 +1,9 @@
+{
+  "name": "google-sheet",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@types/google-apps-script": "1.0.30"
+  }
+}
