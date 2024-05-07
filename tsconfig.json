@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "ES2023",
     "module": "none",
     "outDir": "./out",
     "strict": true
